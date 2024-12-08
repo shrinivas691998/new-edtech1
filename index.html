@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentisera</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="logo">
+            <img src="/cource/images/logo1.png" alt="Mentisera Logo">
+        </div>
+        <div class="nav-buttons">
+            <button class="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+        <div class="mobile-menu">
+            <div class="menu-items">
+                <a href="#" class="menu-item"><i class="fas fa-home"></i> Home</a>
+                <a href="#about" class="menu-item"><i class="fas fa-info-circle"></i> About</a>
+                <a href="#hero" class="menu-item"><i class="fas fa-chalkboard"></i> Workshop</a>
+                <a href="#trainers" class="menu-item"><i class="fas fa-users"></i> Trainers</a>
+                <a href="#cdc" class="menu-item"><i class="fas fa-briefcase"></i> CDC</a>
+                <a href="#rd-section" class="menu-item"><i class="fas fa-flask"></i> R&D</a>
+                <a href="/Registration/registration.html" class="menu-item"><i class="fas fa-user-plus"></i> Registration</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Left Side Navigation -->
+    <div class="left-nav">
+        <a href="#" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-info-circle"></i>
+            <span>About</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Academics</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Students</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-flask"></i>
+            <span>Research</span>
+        </a>
+    </div>
+
+    <!-- Right Side Navigation -->
+    <div class="right-nav">
+        <a href="#about" class="nav-item" style="background: #FF7F50;">About Us</a>
+        <a href="#hero" class="nav-item" style="background: linear-gradient(135deg, #FF6B6B, #FFE66D);">Workshop</a>
+        <a href="#trainers" class="nav-item" style="background: #bcbabb;">Trainers</a>
+        <a href="#cdc" class="nav-item" style="background: #00CED1;">CDC</a>
+        <a href="#rd-section" class="nav-item" style="background: #8b8c88;">R&D</a>
+        <a href="/Registration/registration.html" class="nav-item" style="background: linear-gradient(135deg, #45ade1, #393daf);">Registration</a>
+    </div>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=cover&w=3840&h=2160&q=100" alt="Image 1">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=cover&w=3840&h=2160&q=100" alt="Image 2">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=cover&w=3840&h=2160&q=100" alt="Image 3">
+            <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=cover&w=3840&h=2160&q=100" alt="Image 1">
+        </div>
+    </div>
+
+    <!-- New About Us section -->
+    <section class="company-intro" id="about">
+        <main class="intro-container">
+            <!-- About Content First -->
+            <section class="intro-hero">
+                <div class="intro-content">
+                    <div class="intro-header">
+                        <h1>About<br>Mentisera</h1>
+                        <div class="intro-divider"></div>
+                    </div>
+                    <p class="intro-text">Founded by Sujith Kumar S., Mentisera is on a mission to revolutionize education through the power of technology. We believe in providing not just knowledge, but the skills that drive innovation and success in today's tech-driven world.</p>
+                    <div class="intro-cta">
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="cta-ripple"></div>
+                    </div>
+                </div>
+
+                <!-- Values Section -->
+                <div class="values-slider">
+                    <div class="values-container">
+                        <div class="value-card">
+                            <div class="value-header">
+                                <h2>Vision</h2>
+                                <div class="value-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                            </div>
+                            <p>To build a world where education and technology converge, enabling every learner to access high-quality, impactful learning experiences.</p>
+                        </div>
+                        <div class="value-card">
+                            <div class="value-header">
+                                <h2>Mission</h2>
+                                <div class="value-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                            </div>
+                            <p>To provide a comprehensive, tech-driven education platform offering cutting-edge courses that bridge the gap between academic learning and real-world application.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Founder's Message at Bottom -->
+        <div class="founder-message-wrapper">
+            <section class="founder-message">
+                <div class="message-box">
+                    <div class="quote-mark">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="message-title">Founder's Message</p>
+                    <p class="message-content">"At Mentisera, we're not just about imparting knowledge—we're about transforming how you learn, grow, and prepare for the future. With an unwavering focus on innovation and hands-on learning, our platform is designed to empower students and tech enthusiasts to take charge of their learning journey."</p>
+                    <div class="founder-profile">
+                        <div class="founder-text">
+                            <h3>Sujith Kumar S.</h3>
+                            <span>Founder, Mentisera</span>
+                        </div>
+                        <div class="founder-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="s1">
+    <div class="container">
+        <!-- Left Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-card">
+                <div class="hero-content">
+                
+                    <h1>STUDY <br>AT<br> MENTISERA</h1>
+                 
+                    <p class="description">At Mentisera, we're passionate about equipping students with hands-on, industry-relevant skills. 
+                        With guidance from top mentors and a focus on experiential learning, we bring global standards of education within reach, 
+                        wherever you are.</p>
+                    
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Programs</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Faculty</span>
+                        </div>
+                    </div>
+
+                    <div class="learn-more-btn">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+        <!-- Right Section -->
+        <section class="programs-section">
+            <div class="section-header">
+                <div class="header-line"></div>
+                <h2>Browse by Departments</h2>
+              
+            </div>
+
+            <div class="programs-grid">
+                <a href="cource/CSE.html" class="program-card">
+                    <div class="card-content">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Computer Science</h3>
+                        <span class="program-tag">Most Popular</span>
+                    </div>
+                </a>
+
+                <a href="cource/EE.html" class="program-card">
+                    <div class="card-content">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Electronics and Electrical</h3>
+                        <span class="program-tag">Featured</span>
+                    </div>
+                </a>
+
+                <a href="cource/M&C.html" class="program-card">
+                    <div class="card-content">
+                        <i class="fas fa-building-columns"></i>
+                        <h3>Mechanical & Civil</h3>
+                        <span class="program-tag">In Demand</span>
+                    </div>
+                </a>
+
+                <a href="cource/AS.html" class="program-card">
+                    <div class="card-content">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Aerospace</h3>
+                        <span class="program-tag">Advanced</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+    </section>
+
+    <!-- After programs-section and before section s3 -->
+    <section class="trainers-section" id="trainers">
+        <div class="trainers-container">
+            <div class="section-header">
+                <div class="header-line"></div>
+                <h2>Meet Our Expert Trainers</h2>
+                <p class="section-subtitle">Learn from industry veterans with real-world expertise</p>
+            </div>
+
+            <!-- Add navigation arrows -->
+            <div class="slider-nav prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="slider-nav next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="trainer-overlay">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Dr. Aditi Sharma</h3>
+                        <span class="trainer-role">AI & ML Specialist</span>
+                        <p>Focuses on Artificial Intelligence and Machine Learning, guiding students with a strong foundation in cutting-edge technologies.</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="trainer-overlay">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mr. Rahul Deshmukh</h3>
+                        <span class="trainer-role">Full-Stack & Security Expert</span>
+                        <p>Emphasizes Full-Stack Development and Cybersecurity, equipping learners with essential technical skills for modern software and secure systems.</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="trainer-overlay">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Dr. Meera Menon</h3>
+                        <span class="trainer-role">IoT & Embedded Systems Lead</span>
+                        <p>Specializes in IoT and Embedded Systems, helping students innovate with smart devices and efficient solutions.</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="trainer-overlay">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mr. Arjun Singh</h3>
+                        <span class="trainer-role">CAD/CAM Specialist</span>
+                        <p>Provides hands-on expertise in CAD/CAM and structural engineering, fostering creativity and problem-solving in design.</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="trainer-overlay">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Dr. Priyanka Rao</h3>
+                        <span class="trainer-role">Aerospace Expert</span>
+                        <p>A former ISRO scientist, mentors Aerospace students, inspiring breakthroughs in rocket propulsion and UAV design.</p>
+                    </div>
+                </div>
+
+                <div class="trainer-card">
+                    <div class="trainer-image">
+                        <div class="trainer-overlay">
+                            <div class="trainer-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Mr. Vishal Patil</h3>
+                        <span class="trainer-role">Robotics & Automation Lead</span>
+                        <p>Integrates robotics and automation into practical learning, preparing students to lead in advanced engineering fields.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="particles-bg"></div>
+    <section class="cdc-section" id="cdc">
+        <main>
+            <section class="cdc-hero">
+                <div class="cdc-hero__content">
+                    <div class="title-wrapper">
+                        <h1>Career<br>Development<br>Centre</h1>
+                        <div class="accent-line"></div>
+                    </div>
+                    <p>Our Career Development Centre’s team is dedicated to connecting students with ideal
+                         roles in leading organizations. We focus on industry-based skills to help students launch their careers with confidence and purpose.</p>
+                    <div class="cdc-arrow-btn">
+                        <i class="fas fa-arrow-right"></i>
+                        <div class="ripple"></div>
+                    </div>
+                </div>
+
+                <div class="cdc-slider">
+                    <div class="cdc-stats">
+                        <div class="cdc-stats__slide">
+                            <div class="cdc-stats__item">
+                                <div class="stat-wrapper">
+                                    <h2 class="counter">459</h2>
+                                    <div class="stat-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p>Super Dream Offers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cdc-logos">
+                        <div class="cdc-logos__slide">
+                            <div class="logo-card">
+                                <img src="cerium.png" alt="Cerium">
+                            </div>
+                            <div class="logo-card">
+                                <img src="cerner.png" alt="Cerner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cdc-testimonial">
+                <div class="cdc-testimonial__box">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>Testimonials</p>
+                    <p>"Mentisera's Career Development Centre equipped me with the skills I needed to confidently enter the tech industry."</p>
+                    <div class="cdc-student">
+                        <div class="student-info">
+                            <h3>Kavya J</h3>
+                            <span>Computer Science</span>
+                        </div>
+                        <div class="student-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </section>
+<section class="s3">
+     <div class="carousel-main-container">
+        <div class="carousel-text-section">
+            <h1>Carousel Title</h1>
+            <p>This is a description of the carousel. You can add more details here.</p>
+        </div>
+        <div class="carousel-outer-wrapper">
+            <div class="carousel-slider">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="auto.png" alt="Image 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="page-layout" id="rd-section">
+    <div class="content-overlay">
+        <div class="section-2">
+            <h2 class="title">Mentisera Research & Development (R&D)</h2>
+            <p class="description1">The Mentisera R&D division focuses on creating cutting-edge tools and resources for hands-on learning. Our goal is to drive innovation in edtech by developing accessible, practical experiences that help students excel in their fields.</p>
+        </div>
+        <div class="arrow-box">
+            <i class="arrow">→</i>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="r&d.png" alt="Full page image" class="banner-image">
+    </div>
+</div>
+    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="/cource/images/logo1.png" alt="Mentisera Logo" class="footer-logo">
+                    <p class="footer-desc">Empowering students with hands-on learning and industry-ready skills for a brighter future.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">About Us</a></li>
+                        <li><a href="../index.html#about">Workshop</a></li>
+                        <li><a href="../index.html#trainers">Trainers</a></li>
+                        <li><a href="../index.html#cdc">CDC</a></li>
+                        <li><a href="../index.html#rd-section">R&D</a></li>
+                        <li><a href="/Registration/registration.html">Registration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Downloads</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Rukmini Knowledge Park, Yelahanka, Kattigenahalli, Bengaluru, Sathanur, Karnataka 560064</li>
+                        <li><i class="fas fa-phone"></i> +91 9342780837</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@studytime.com" class="footer-email">support@Mentisera.in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 StudyTime. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
