@@ -85,44 +85,62 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         const { branch, courseName } = getCourseDetails();
-
-        // Get all form data
-        const formData = {
-            firstName: document.getElementById('firstName').value,
-            lastName: document.getElementById('lastName').value,
-            email: document.getElementById('popupEmail').value,
-            gender: document.getElementById('gender').value,
-            currentDegree: document.getElementById('currentDegree').value,
-            phone: document.getElementById('phone').value,
-            course: courseName,
-            branch: branch,
-            year: document.getElementById('year').value,
-            message: document.getElementById('message').value
-        };
-
-        // Show loading state
         const submitBtn = this.querySelector('.submit-btn');
         const originalBtnText = submitBtn.textContent;
+
+        // Show loading state
         submitBtn.textContent = 'Processing...';
         submitBtn.disabled = true;
 
         try {
-            // Store formData in sessionStorage for access after payment
-            sessionStorage.setItem('registrationData', JSON.stringify(formData));
+            // Send email to admin
+            await emailjs.send(
+                "service_36m88l9",      // Your service ID
+                "template_ucoe0ba",     // Admin template ID
+                {
+                    to_email: "mentisera.edtech@gmail.com",
+                    name: `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`, // Combined name
+                    email: document.getElementById('popupEmail').value,
+                    phone: document.getElementById('phone').value,
+                    branch: branch,
+                    course: courseName,
+                    year_of_passing: document.getElementById('year').value,
+                    gender: document.getElementById('gender').value,
+                    current_degree: document.getElementById('currentDegree').value,
+                    message: document.getElementById('message').value || 'No message provided'
+                }
+            );
 
-            // Redirect to payment page
-            const paymentURL = `payment-details.html?firstName=${encodeURIComponent(formData.firstName)}&lastName=${encodeURIComponent(formData.lastName)}&branch=${encodeURIComponent(formData.branch)}&course=${encodeURIComponent(formData.course)}`;
-            window.location.href = paymentURL;
+            // Send confirmation to applicant
+            await emailjs.send(
+                "service_36m88l9",      // Your service ID
+                "template_gty84hj",     // Applicant template ID
+                {
+                    to_name: `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`,
+                    to_email: document.getElementById('popupEmail').value,
+                    name: `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`,
+                    branch: branch,
+                    course: courseName
+                }
+            );
+
+            // Show success message
+            alert('Registration completed successfully! Confirmation emails have been sent.');
+            
+            // Reset form and close popup
+            this.reset();
+            document.getElementById('popupOverlay').style.display = 'none';
 
         } catch (error) {
-            console.error('FAILED...', error);
-            alert('There was an error processing your registration. Please try again.');
+            console.error('Error:', error);
+            alert(`Registration failed: ${error.message}. Please try again or contact support.`);
+        } finally {
             submitBtn.textContent = originalBtnText;
             submitBtn.disabled = false;
         }
     });
 
-    // Add function to send confirmation emails after successful payment
+    // Update the sendConfirmationEmails function
     window.sendConfirmationEmails = async function(paymentDetails) {
         const formData = JSON.parse(sessionStorage.getItem('registrationData'));
         
@@ -131,63 +149,27 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Parameters for admission team email
-        const admissionTeamParams = {
-            from_name: `${formData.firstName} ${formData.lastName}`,
-            applicant_email: formData.email,
-            gender: formData.gender,
-            current_degree: formData.currentDegree,
-            phone_number: formData.phone,
-            selected_branch: formData.branch,
-            selected_course: formData.course,
-            passing_year: formData.year,
-            message: formData.message || "No message provided",
-            payment_status: "Paid",
-            payment_id: paymentDetails.paymentId,
-            payment_amount: paymentDetails.amount,
-            to_email: 'arishrinivas28@gmail.com'
-        };
-
-        // Parameters for applicant confirmation email
-        const applicantParams = {
-            to_name: formData.firstName,
-            full_name: `${formData.firstName} ${formData.lastName}`,
-            email: formData.email,
-            gender: formData.gender,
-            current_degree: formData.currentDegree,
-            phone_number: formData.phone,
-            selected_branch: formData.branch,
-            selected_course: formData.course,
-            passing_year: formData.year,
-            payment_status: "Confirmed",
-            payment_id: paymentDetails.paymentId,
-            payment_amount: paymentDetails.amount,
-            to_email: formData.email
-        };
-
         try {
-            // Send email to admission team
-            const admissionTeamResponse = await emailjs.send(
-                'service_ejwt45e',
-                'template_autic0d',
-                admissionTeamParams,
-                'ZAkK5UikAMPnRSPQq'
-            );
+            const response = await fetch('http://localhost:3000/api/send-confirmation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    paymentId: paymentDetails.paymentId,
+                    paymentAmount: paymentDetails.amount
+                })
+            });
 
-            // Send confirmation email to applicant
-            const applicantResponse = await emailjs.send(
-                'service_ejwt45e',
-                'template_xo7uire',
-                applicantParams,
-                'ZAkK5UikAMPnRSPQq'
-            );
-
-            if (admissionTeamResponse.status === 200 && applicantResponse.status === 200) {
-                // Clear stored registration data
-                sessionStorage.removeItem('registrationData');
-                alert('Registration completed successfully! Confirmation emails have been sent.');
-                window.location.href = 'index.html'; // Redirect to home page
+            if (!response.ok) {
+                throw new Error('Failed to send confirmation emails');
             }
+
+            // Clear stored registration data
+            sessionStorage.removeItem('registrationData');
+            
+            console.log('Confirmation emails sent successfully');
         } catch (error) {
             console.error('Failed to send confirmation emails:', error);
             alert('Payment successful but failed to send confirmation emails. Please contact support.');
