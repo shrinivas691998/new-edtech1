@@ -1528,7 +1528,7 @@ html {
     font-size: 3.5rem;
     color: var(--text-primary);
     margin-bottom: 1rem;
-    background: var(--gradient-1);
+    background: #fb571b;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -2044,13 +2044,13 @@ html {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #fb571b;
     display: block;
     margin-bottom: 0.5rem;
     background: var(--gradient-1);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+   
     animation: countUp 2s ease-out forwards;
 }
 
@@ -3781,34 +3781,39 @@ main {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: #FF7F50; /* Changed to match about-section theme */
+    color: #fb571b; /* Changed to match about-section theme */
     background: linear-gradient(135deg, #FF7F50, #FF6B6B); /* Optional: gradient effect */
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+   
+    
 }
 
 .intro-divider {
     width: 80px;
     height: 4px;
-    background: #FF7F50;
+    background: #fb571b;
     margin: 1.5rem 0;
 }
 
 .intro-text {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #636e72;
+    color: #000000;
     margin-bottom: 2rem;
     width: 115%; /* Added width to increase by 15% */
     position: relative; /* Added for proper positioning */
+}
+.intro-text p{
+    color: #000;
+
 }
 
 .intro-cta {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #FF7F50;
+    background:#fb571b;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3846,16 +3851,16 @@ main {
 }
 
 .value-card h2 {
-    background: linear-gradient(135deg, #FF7F50, #FF6B6B);
+   
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: #fb571b;
     font-size: 2rem;
     font-weight: 700;
 }
 
 .value-card p {
-    color: #636e72;
+    color: #000000;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-top: 1rem;
@@ -3878,7 +3883,7 @@ main {
 }
 
 .value-icon i {
-    color: #FF7F50;
+    color: #fb571b;
     font-size: 1.5rem;
 }
 
@@ -3929,7 +3934,7 @@ main {
     left: 30px;
     width: 40px;
     height: 40px;
-    background: #FF7F50;
+    background: #fb571b;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -3943,14 +3948,14 @@ main {
 .message-title {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #FF7F50;
+    color: #fb571b;
     margin-bottom: 1rem;
 }
 
 .message-content {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #636e72;
+    color: #000000;
     margin-bottom: 2rem;
 }
 
@@ -3982,7 +3987,7 @@ main {
 
 .founder-image i {
     font-size: 1.8rem;
-    color: #FF7F50;
+    color: #fb571b;
 }
 
 /* Responsive Design */
@@ -4103,7 +4108,7 @@ main {
 .intro-text {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #636e72;
+    color: #000000;
     margin-bottom: 2rem;
     width: 115%; /* Added width to increase by 15% */
     position: relative; /* Added for proper positioning */
